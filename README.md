@@ -37,3 +37,5 @@
 
 5.) Create qa and prod docker environment
   - include build and deploy scripts
+
+6. Add Dockerrun.aws.json
