@@ -38,6 +38,9 @@
 5.) Create qa and prod docker environment
   - include build and deploy scripts
 
-6. Add Dockerrun.aws.json
 
-7. Add circle.yml
+6.) Add Dockerrun.aws.json
+
+7.) Add circle.yml
+
+8.) Update URL name in route53/hosted zones
