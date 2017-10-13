@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    build:
+      context: ../../../
+      dockerfile: Dockerfile-test
+    image: vanilla-rails-with-docker:test
+    environment:
+      RAILS_ENV: test
+    command: sh -c "rspec"
