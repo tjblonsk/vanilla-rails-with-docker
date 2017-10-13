@@ -1,0 +1,38 @@
+machine:
+  services:
+    - docker
+
+database:
+  override:
+    - echo "Skipping DB"
+
+dependencies:
+  override:
+    - echo "Skipping Bundle"
+
+test:
+  override:
+    - APP_ENV=test make test
+
+deployment:
+  staging:
+    branch: develop
+    commands:
+      - APP_ENV=qa make build
+      - APP_ENV=qa make push
+      - APP_ENV=qa make deploy
+  production:
+    branch: master
+    commands:
+      - APP_ENV=prod make build
+      - APP_ENV=prod make push
+      - APP_ENV=prod make deploy:
+          timeout: 960
+      - make record_deployment
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master
+        - develop

@@ -39,3 +39,5 @@
   - include build and deploy scripts
 
 6. Add Dockerrun.aws.json
+
+7. Add circle.yml
