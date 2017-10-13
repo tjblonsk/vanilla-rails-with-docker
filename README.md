@@ -34,3 +34,6 @@
     You can now run tests within a docker env! Try it out with: `make test`
 
 4.) Create docker development environment
+
+5.) Create qa and prod docker environment
+  - include build and deploy scripts

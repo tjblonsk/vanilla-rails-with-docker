@@ -1,0 +1,9 @@
+version: '2'
+services:
+  web:
+    build:
+      context: ../../../
+      dockerfile: Dockerfile-development
+    image: vanilla-rails-with-docker:development
+    environment:
+      RAILS_ENV: development

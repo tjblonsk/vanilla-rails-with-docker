@@ -1,0 +1,22 @@
+FROM xogroup/ruby-node:2.3.5-slim
+
+COPY Gemfile* /tmp/
+WORKDIR /tmp
+
+RUN gem install bundler --no-ri --no-rdoc \
+ && bundle install --without test development
+
+ENV APP_DIR /webapp
+
+RUN mkdir -p $APP_DIR
+WORKDIR $APP_DIR
+ADD . $APP_DIR
+
+RUN rake assets:precompile
+
+# Expose a volume so that nginx will be able to read in assets in production.
+VOLUME ["$APP_DIR/public"]
+
+EXPOSE 80
+
+CMD foreman start
