@@ -31,5 +31,6 @@
     continue.
     Make sure that `gem install sqlite3 -v '1.3.13'` succeeds before bundling.
     ```
+    You can now run tests within a docker env! Try it out with: `make test`
 
-
+4.) Create docker development environment
