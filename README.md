@@ -1,5 +1,8 @@
 # README
 
+Follow the commits in concert with the below steps to dockerize an out of the box Rails app.
+TODO: Add DB support. 
+
 1.) Create Beanstalk app
   - https://console.aws.amazon.com/elasticbeanstalk/home?region=us-east-1#/newApplication
     - create web server
