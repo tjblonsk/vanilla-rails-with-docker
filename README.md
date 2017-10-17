@@ -38,8 +38,7 @@
 5.) Create qa and prod docker environment
   - include build and deploy scripts
 
-
-6.) Add Dockerrun.aws.json
+6.) Add Dockerrun.aws.json and [.elasticbeanstalk/config.yml](https://git.xogrp.com/Shared/the_knot_membership-rails/blob/develop/.elasticbeanstalk/config.yml)
 
 7.) Add circle.yml
 
